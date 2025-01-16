@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
-import Timer from "./ui/Timer/Timer";
+import UpcomingEvents from "./ui/UpcomingEvents/UpcomingEvents";
 
 export default function HeroSection() {
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
-      <Timer />
+    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <UpcomingEvents />
     </Box>
   );
 }

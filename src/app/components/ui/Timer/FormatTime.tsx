@@ -1,7 +1,7 @@
-import { Typography } from "@mui/material";
-import React from "react";
+//import { Typography } from "@mui/material";
+//import React from "react";
 
-interface FormatTimeProps {
+/*interface FormatTimeProps {
   value: number;
   unit: string;
 }
@@ -17,3 +17,4 @@ export default function FormatTime({ value, unit }: FormatTimeProps) {
     </>
   );
 }
+*/

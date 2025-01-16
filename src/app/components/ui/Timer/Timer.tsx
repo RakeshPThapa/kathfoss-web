@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import FormatTime from "./FormatTime";
@@ -82,3 +82,4 @@ export default function Timer() {
     </Box>
   );
 }
+*/
