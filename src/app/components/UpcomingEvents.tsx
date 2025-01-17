@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import {
@@ -13,21 +13,21 @@ import {
 
 const events = [
   {
-    title: "AI Workshop",
+    title: "Introducing Ucharan AI",
     description: "Event details: 20th Jan, 2025",
-    image: "/images/ai-workshop.png", 
-    link: "#",
+    image: "/images/ucharan-ai.png",
+    link: "#",//Updated link for learn more
   },
   {
     title: "Hackathon",
-    description: "Event details: 15th Feb, 2025",
-    image: "/images/hackathon.png", 
-    link: "#",
+    description: "Event details: 28th June, 2025",
+    image: "/images/hackathon.png",
+    link: "#",//https://example.com/hackathon
   },
   {
-    title: "Tech Talk",
+    title: "Git/GitHub Python Workshop",
     description: "Event details: 10th Mar, 2025",
-    image: "/images/tech-talk.png", 
+    image: "/images/workshop.png",
     link: "#",
   },
 ];
@@ -44,10 +44,15 @@ export default function UpcomingEvents() {
       >
         Upcoming Events
       </Typography>
-      <Grid2 container spacing={4}>
+      <Grid2
+        container
+        spacing={4}
+        justifyContent="center" //horizontal centre items
+        alignItems="center" //vertical centre items
+      >
         {events.map((event, index) => (
-          <Grid2 item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{ maxWidth: 345 }}>
+          <Grid2 xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ maxWidth: 345, margin: "auto" }}> 
               <CardMedia
                 component="img"
                 height="140"
@@ -62,7 +67,12 @@ export default function UpcomingEvents() {
                   {event.description}
                 </Typography>
               </CardContent>
-              <Button size="small" color="primary" href={event.link} target="_blank">
+              <Button
+                size="small"
+                color="primary"
+                href={event.link}
+                target="_blank"
+              >
                 Learn More
               </Button>
             </Card>
