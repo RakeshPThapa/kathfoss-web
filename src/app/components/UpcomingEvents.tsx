@@ -15,19 +15,19 @@ const events = [
   {
     title: "Introducing Ucharan AI",
     description: "Event details: 20th Jan, 2025",
-    image: "/images/ucharan-ai.png",
+    image: "/images/UpcomingEvents/ucharan-ai.png",
     link: "#",//Updated link for learn more
   },
   {
     title: "Hackathon",
     description: "Event details: 28th June, 2025",
-    image: "/images/hackathon.png",
+    image: "/images/UpcomingEvents/hackathon.png",
     link: "#",//https://example.com/hackathon
   },
   {
     title: "Git/GitHub Python Workshop",
     description: "Event details: 10th Mar, 2025",
-    image: "/images/workshop.png",
+    image: "/images/UpcomingEvents/workshop.png",
     link: "#",
   },
 ];
@@ -51,7 +51,7 @@ export default function UpcomingEvents() {
         alignItems="center" //vertical centre items
       >
         {events.map((event, index) => (
-          <Grid2 xs={12} sm={6} md={4} key={index}>
+          <Grid2  key={index}>
             <Card sx={{ maxWidth: 345, margin: "auto" }}> 
               <CardMedia
                 component="img"
