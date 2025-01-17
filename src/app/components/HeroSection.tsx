@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-
 import Timer from "./ui/Timer/Timer";
 
 
