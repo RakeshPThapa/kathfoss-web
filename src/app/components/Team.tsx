@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { Grid2, Box, Typography, Modal } from "@mui/material";
-import Grid from "@mui/material/Grid2";
 
 interface TeamMember {
   name: string;
@@ -99,7 +98,7 @@ const Team: React.FC = () => {
                   left: 0,
                   width: "100%",
                   background: "rgba(0, 0, 0, 0.6)",
-                  color: "#fff",
+                  color: "#FFF",
                   padding: "0.5rem",
                   textAlign: "center",
                 }}
@@ -119,7 +118,7 @@ const Team: React.FC = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            backgroundColor: "#fff",
+            backgroundColor: "#0E1322",
             boxShadow: 24,
             padding: "2rem",
             borderRadius: "8px",
@@ -142,7 +141,7 @@ const Team: React.FC = () => {
               <Typography variant="subtitle1" color="text.secondary" gutterBottom>
                 {selectedMember.role}
               </Typography>
-              <Typography variant="body1" sx={{color: 'black'}}>{selectedMember.description}</Typography>
+              <Typography variant="body1" sx={{color: 'white'}}>{selectedMember.description}</Typography>
             </>
           )}
         </Box>
