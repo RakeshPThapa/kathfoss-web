@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Box, Typography, Button, Modal, Grid2 } from "@mui/material";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { teamMembers } from "../data/meet-our-team";
 import TeamMember from "@/components/ui/MeetOurTeam/TeamMember";
 import TeamMemberModal from "@/components/ui/MeetOurTeam/TeamMemberModal";
@@ -15,7 +15,6 @@ interface TeamProps {
 const Team: React.FC<TeamProps> = ({ showAll }) => {
   const [open, setOpen] = useState(false);
   const [selectedMember, setSelectedMember] = useState<TeamMemberProps | null>(null);
-  const router = useRouter();
 
   const handleOpen = (member: TeamMemberProps) => {
     setSelectedMember(member);
@@ -35,23 +34,19 @@ const Team: React.FC<TeamProps> = ({ showAll }) => {
       <Box mt={4}>
         <Box mb={6}>
           <Grid2 container spacing={2} justifyContent="center">
-            {teamMembers.mainCommittee.slice(0, showAll ? undefined : 3).map((member, index) => (
+            {teamMembers.mainCommittee.slice(0, showAll ? undefined : 9).map((member, index) => (
               <TeamMember key={index} member={member} handleOpen={handleOpen} />
             ))}
           </Grid2>
         </Box>
-        {!showAll && (
-          <Box textAlign="center" mt={4}>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => router.push("/meet-our-team")}
-            >
+        <Box textAlign="center" mt={4}>
+          <Link href="/meet-our-team" passHref>
+            <Button variant="contained" color="secondary">
               See More
             </Button>
-          </Box>
-        )}
-      </Box>
+          </Link>
+        </Box>
+      </Box> 
       <TeamMemberModal open={open} handleClose={handleClose} member={selectedMember} />
     </Box>
   );

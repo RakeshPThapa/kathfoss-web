@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid2 } from "@mui/material";
 import { TeamMemberProps } from "@/type/team-memeber";
+import Image from "next/image";
 
 interface TeamMemberTypes {
   member: TeamMemberProps;
@@ -23,16 +24,19 @@ const TeamMember: React.FC<TeamMemberTypes> = ({ member, handleOpen }) => {
           },
         }}
       >
-        <img
-          src={member.image}
-          alt={member.name}
-          style={{
-            width: "63%",
-            height: "auto",
-            borderRadius: "8px",
-            transition: "transform 0.3s ease-in-out",
-          }}
-        />
+      <Image
+        src={member.image}
+        alt={member.name}
+        width={300} 
+        height={300} 
+        style={{
+        width: "63%", 
+        height: "auto",
+        borderRadius: "8px",
+        transition: "transform 0.3s ease-in-out",
+  }}
+  priority={true} 
+/>
         <Box
           sx={{
             position: "absolute",
@@ -40,7 +44,7 @@ const TeamMember: React.FC<TeamMemberTypes> = ({ member, handleOpen }) => {
             left: 0,
             right: 0,
             width:"63%",
-            background: "rgba(0, 0, 0, 0.4)",
+            background: "rgba(0, 0, 0, 0.0)",
             color: "#FFF",
             padding: "0.5rem",
             textAlign: "center",

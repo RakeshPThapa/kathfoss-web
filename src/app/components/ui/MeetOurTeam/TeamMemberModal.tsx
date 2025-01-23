@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Modal } from "@mui/material";
 import { TeamMemberProps } from "@/type/team-memeber";
+import Image from "next/image";
 
 interface TeamMemberModalProps {
   open: boolean;
@@ -27,15 +28,18 @@ const TeamMemberModal: React.FC<TeamMemberModalProps> = ({ open, handleClose, me
           textAlign: "center",
         }}
       >
-        <img
-          src={member.image}
-          alt={member.name}
-          style={{
-            width: "100%",
-            borderRadius: "8px",
-            marginBottom: "1rem",
-          }}
-        />
+        <Image
+  src={member.image}
+  alt={member.name}
+  width={500} 
+  height={500} 
+  style={{
+    width: "100%",
+    borderRadius: "8px",
+    marginBottom: "1rem",
+  }}
+  priority={true} 
+/>
         <Typography variant="h5">{member.name}</Typography>
         <Typography variant="subtitle1">{member.role}</Typography>
         <Typography variant="body1" mt={2}>
