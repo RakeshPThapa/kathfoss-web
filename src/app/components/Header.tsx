@@ -15,7 +15,9 @@ export default function Header() {
     { label: "HOME", href: "#home" },
     { label: "EVENTS", href: "#events" },
     { label: "TEAM", href: "#team" },
+    { label: "CONTRIBUTORS", href: "#contributors" },
     { label: "CONTACT", href: "#contact-us" },
+    { label: "ABOUT US", href: "#about-us" },
   ];
 
   useEffect(() => {
@@ -44,9 +46,11 @@ export default function Header() {
     >
       <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
         {/* Logo */}
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Image src="/assets/logo.svg" alt="Logo" width={130} height={130} />
-        </Box>
+        <Link href="/">
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Image src="/assets/logo.svg" alt="Logo" width={160} height={160} />
+          </Box>
+        </Link>
 
         {/* Desktop Navigation */}
         <Box
@@ -61,8 +65,8 @@ export default function Header() {
               <Button
                 sx={{
                   color: "#FFF",
-                  fontWeight: "normal",
-                  fontSize: "14px",
+                  fontWeight: "semibold",
+                  fontSize: "0.9rem",
                   textTransform: "none",
                   transition: "color 0.3s",
                   "&:hover": { color: "#BBB" },

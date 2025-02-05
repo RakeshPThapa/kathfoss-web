@@ -8,9 +8,9 @@ import {
   HeroSection,
   HighlightedProjects,
   Team,
+  Contributors,
   UpcomingEvents,
 } from "./components";
-
 import React from "react";
 import ContactUs from "./components/ContactUs";
 
@@ -26,11 +26,11 @@ export default async function Home() {
         scrollBehavior: "smooth",
       }}
     >
-      {/* Header */}
-      <Header />
-
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Contributors Section */}
+      <Contributors/>
 
       {/* Event Highlights */}
       <EventsHighlight />
@@ -39,7 +39,7 @@ export default async function Home() {
       <UpcomingEvents />
 
       {/* Team */}
-      <Team  />
+      <Team />
 
       {/* Highlighted Projects */}
       <HighlightedProjects />
